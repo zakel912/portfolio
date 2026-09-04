@@ -1,22 +1,28 @@
 import type { NextConfig } from "next";
 
-const [githubOwner, githubRepository] = (process.env.GITHUB_REPOSITORY ?? "").split("/");
-const isGithubUserSite = githubRepository?.toLowerCase() === `${githubOwner?.toLowerCase()}.github.io`;
-const basePath = githubRepository && !isGithubUserSite ? `/${githubRepository}` : "";
+const isGithubPages = process.env.GITHUB_ACTIONS === "true";
+const repoName = "zakaria_el_mrani_portfolio.github.dev";
+
+const basePath = isGithubPages ? `/${repoName}` : "";
 
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
+
   basePath,
+  assetPrefix: basePath,
+
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
+
   env: {
-    NEXT_PUBLIC_BASE_PATH: basePath
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
+
   experimental: {
-    useTypeScriptCli: false
-  }
+    useTypeScriptCli: false,
+  },
 };
 
 export default nextConfig;
