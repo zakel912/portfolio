@@ -48,7 +48,6 @@ export function Footer() {
       </div>
       <div className="container footer-base">
         <span>© {new Date().getFullYear()} Zakaria El Mrani</span>
-        <span>{footer.designed}</span>
       </div>
     </footer>
   );

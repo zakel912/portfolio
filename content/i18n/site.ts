@@ -144,8 +144,7 @@ export const siteTranslations = {
       phone: "Téléphone",
       resumes: "Curriculum vitæ",
       resumeIntro: "Les emplacements sont prêts. Les boutons s’activeront dès que les PDF seront ajoutés.",
-      resumeLabels: { general: "CV général", "data-engineering": "CV Data Engineering", "data-ai": "CV Data Science / IA" },
-      //designed: "Conçu autour des systèmes, des décisions & des compromis."
+      resumeLabels: { general: "CV général", "data-engineering": "CV Data Engineering", "data-ai": "CV Data Science / IA" }
     },
     notFound: {
       eyebrow: "404 / Page introuvable",
@@ -174,7 +173,7 @@ export const siteTranslations = {
       ],
       connect: "How the pieces connect", storyTitle: "Models answer questions.\nSystems make the answers usable.", story: ["Applied mathematics gave me tools to reason about uncertainty, optimisation and model behaviour. Software engineering gave me the means to turn that reasoning into maintainable components.", "My recent projects connect both sides: a ledger pipeline with traceable analytical layers, a document-grounded RAG application, cloud data movement, and agent workflows with explicit limitations.", "I’m looking to continue on Data Engineering, AI Engineering, ML Engineering or Cloud Data problems where architecture and implementation have to work together."], toolkit: "Working toolkit", toolkitTitle: "Used across the work.", toolkitNote: "Grouped by context—not ranked with arbitrary proficiency scores.", skillLabels: ["Data engineering", "Cloud & big data", "AI engineering", "Data & storage", "Machine learning", "Software systems"], cta: "See how these tools interact inside complete project architectures.", caseStudies: "Explore case studies"
     },
-    footer: { kicker: "Let’s build useful systems.", copy: "Open to graduate opportunities across Data Engineering, AI Engineering and ML Engineering.", contactLabel: "Contact", contactTitle: "Let’s talk.", email: "Email", phone: "Phone", resumes: "Resumes", resumeIntro: "The file slots are ready. Download buttons activate once the PDFs are added.", resumeLabels: { general: "General resume", "data-engineering": "Data Engineering resume", "data-ai": "Data Science / AI resume" }, designed: "" },
+    footer: { kicker: "Let’s build useful systems.", copy: "Open to graduate opportunities across Data Engineering, AI Engineering and ML Engineering.", contactLabel: "Contact", contactTitle: "Let’s talk.", email: "Email", phone: "Phone", resumes: "Resumes", resumeIntro: "The file slots are ready. Download buttons activate once the PDFs are added.", resumeLabels: { general: "General resume", "data-engineering": "Data Engineering resume", "data-ai": "Data Science / AI resume" } },
     notFound: { eyebrow: "404 / Not found", title: "This route is outside the system.", text: "The page may have moved, or the project does not exist.", action: "Browse projects" }
   }
 } as const;
