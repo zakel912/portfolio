@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="760" viewBox="0 0 600 760" role="img" aria-labelledby="title desc">
+  <title id="title">Emplacement de la photo de Zakaria El Mrani</title>
+  <desc id="desc">Placeholder graphique à remplacer par profile.jpg.</desc>
+  <rect width="600" height="760" fill="#111317"/>
+  <path d="M0 1h599v758H0z" fill="none" stroke="#343940" stroke-width="2"/>
+  <path d="M0 570 600 290M0 690l600-280" stroke="#20242a" stroke-width="2"/>
+  <circle cx="300" cy="288" r="112" fill="#1b1f24" stroke="#c8f135" stroke-width="3"/>
+  <path d="M120 650c30-140 105-210 180-210s150 70 180 210" fill="#1b1f24" stroke="#c8f135" stroke-width="3"/>
+  <text x="42" y="65" fill="#c8f135" font-family="monospace" font-size="18" letter-spacing="4">PROFILE / 01</text>
+  <text x="300" y="712" text-anchor="middle" fill="#8e959d" font-family="monospace" font-size="15" letter-spacing="3">PUBLIC/PROFILE.JPG</text>
+</svg>
