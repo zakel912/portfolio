@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowIcon } from "./icons";
 import { useLocale } from "./locale-provider";
 import { profile } from "@/content/profile";
@@ -14,6 +13,7 @@ export function Footer() {
       <div className="container contact-header">
         <p className="eyebrow"><span>06</span> {footer.contactLabel}</p>
         <h2>{footer.contactTitle}</h2>
+        <p className="footer-copy">{footer.copy}</p>
       </div>
       <div className="container contact-grid">
         <div className="contact-methods">
@@ -32,18 +32,6 @@ export function Footer() {
               <span className="button button-disabled" aria-disabled="true" key={resume.id}>{footer.resumeLabels[resume.id]} · {common.unavailable}</span>
             ))}
           </div>
-        </div>
-      </div>
-      <div className="container footer-grid">
-        <div>
-          <p className="footer-kicker">{footer.kicker}</p>
-          <p className="footer-copy">{footer.copy}</p>
-        </div>
-        <div className="footer-links">
-          <Link href="/projects">{common.projects}</Link>
-          <Link href="/experience">{common.experience}</Link>
-          <Link href="/about">{common.about}</Link>
-          <a href={profile.github} target="_blank" rel="noreferrer">GitHub <ArrowIcon /></a>
         </div>
       </div>
       <div className="container footer-base">

@@ -297,6 +297,23 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 .skills-grid li { border: 1px solid #343940; color: #c4c8cc; font-size: 12px; padding: 6px 9px; }
 .about-cta { display: flex; justify-content: space-between; align-items: center; gap: 30px; margin-top: 58px; }
 .about-cta p { font-size: 20px; color: #c6c9cc; }
+.personal-section { padding: 72px 0 82px; border-top: 1px solid var(--line); }
+.personal-grid { display: grid; grid-template-columns: .72fr 1.28fr; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.personal-grid > article { padding: 32px; }
+.personal-grid > article + article { border-left: 1px solid var(--line); }
+.personal-grid .eyebrow { margin-bottom: 12px; }
+.personal-grid h2 { margin: 0 0 28px; font-size: 24px; line-height: 1.15; letter-spacing: -.025em; font-weight: 550; }
+.languages-panel dl { margin: 0; }
+.languages-panel dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 11px 0; border-top: 1px solid var(--line-soft); }
+.languages-panel dt { color: #dfe2e4; font-size: 14px; }
+.languages-panel dd { margin: 0; color: var(--muted); font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: .06em; text-align: right; }
+.interest-list { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.interest-item { padding-top: 14px; border-top: 1px solid var(--line-soft); }
+.interest-item h3 { margin: 0 0 10px; font-size: 16px; line-height: 1.35; font-weight: 550; }
+.interest-item p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.interest-tags { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; margin-top: 28px; }
+.interest-tags > span { margin-right: 5px; color: var(--muted-2); font-family: var(--font-mono); font-size: 9px; text-transform: uppercase; letter-spacing: .07em; }
+.interest-tags small { padding: 4px 8px; border: 1px solid var(--line); color: #c4c8cc; font-size: 11px; }
 .not-found { min-height: 70vh; padding-top: 120px; }
 .not-found h1 { font-size: clamp(50px, 7vw, 92px); letter-spacing: -.06em; margin: 0 0 20px; }
 .not-found > p:not(.eyebrow) { color: var(--muted); margin-bottom: 35px; }
@@ -315,6 +332,8 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
   .experience-row { grid-template-columns: .6fr 1.4fr; }
   .experience-row .tag-list { grid-column: 2; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .personal-grid { grid-template-columns: 1fr; }
+  .personal-grid > article + article { border-left: 0; border-top: 1px solid var(--line); }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-methods { border-right: 0; border-bottom: 1px solid var(--line); }
   .resume-area { padding-left: 0; }
@@ -378,6 +397,9 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
   .about-education { padding: 80px 0; }
   .skills-heading, .about-cta { align-items: flex-start; flex-direction: column; }
   .skills-grid { grid-template-columns: 1fr; }
+  .personal-section { padding-block: 58px; }
+  .personal-grid > article { padding: 26px 20px; }
+  .interest-list { grid-template-columns: 1fr; gap: 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

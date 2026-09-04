@@ -54,6 +54,40 @@ export function AboutContent() {
           <div className="about-cta"><p>{t.cta}</p><Link className="button button-primary" href="/projects">{t.caseStudies} <ArrowIcon /></Link></div>
         </div>
       </section>
+
+      <section className="personal-section">
+        <div className="container personal-grid">
+          <article className="languages-panel">
+            <p className="eyebrow"><span>04 / A</span></p>
+            <h2>{t.languagesTitle}</h2>
+            <dl>
+              {t.languages.map((language) => (
+                <div key={language.name}>
+                  <dt>{language.name}</dt>
+                  <dd>{language.level}</dd>
+                </div>
+              ))}
+            </dl>
+          </article>
+
+          <article className="interests-panel">
+            <p className="eyebrow"><span>04 / B</span></p>
+            <h2>{t.outsideCode}</h2>
+            <div className="interest-list">
+              {t.interests.map((interest) => (
+                <div className="interest-item" key={interest.title}>
+                  <h3>{interest.title}</h3>
+                  <p>{interest.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="interest-tags" aria-label={t.otherInterests}>
+              <span>{t.otherInterests}</span>
+              {t.interestTags.map((interest) => <small key={interest}>{interest}</small>)}
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
   );
 }

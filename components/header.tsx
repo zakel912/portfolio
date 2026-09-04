@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowIcon, MenuMark } from "./icons";
+import { ArrowIcon } from "./icons";
 import { LanguageSwitcher } from "./language-switcher";
 import { useLocale } from "./locale-provider";
 import { profile } from "@/content/profile";
@@ -12,7 +12,6 @@ export function Header() {
     <header className="site-header">
       <div className="container nav-wrap">
         <Link className="brand" href="/" aria-label="Zakaria El Mrani, home">
-          <MenuMark />
           <span>Zakaria El Mrani</span>
         </Link>
         <nav aria-label="Navigation principale">

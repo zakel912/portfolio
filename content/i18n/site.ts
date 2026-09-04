@@ -48,7 +48,7 @@ export const siteTranslations = {
       fullExperience: "Voir les expériences",
       moreLabel: "Autres projets",
       moreTitle: "Machine Learning appliqué & bases logicielles.",
-      allTen: "Voir les dix projets",
+      allTen: "Voir les projets",
       education: "Formation",
       educationTitle: "L’informatique, ancrée dans les mathématiques.",
       degree: "Diplôme d’ingénieur en informatique",
@@ -57,7 +57,7 @@ export const siteTranslations = {
       background: "Découvrir mon parcours"
     },
     projectsPage: {
-      eyebrow: "Projets / 10 systèmes",
+      eyebrow: "Projets",
       titleA: "L’ingénierie à travers",
       titleB: "des systèmes complets.",
       intro: "Les projets sont classés selon leur profondeur technique, et non uniquement par date. Chaque étude distingue ce qui a été construit, son fonctionnement, ma contribution et ses limites.",
@@ -133,7 +133,27 @@ export const siteTranslations = {
       toolkitNote: "Regroupés par contexte — sans scores de compétence arbitraires.",
       skillLabels: ["Data engineering", "Cloud & big data", "AI engineering", "Données & stockage", "Machine learning", "Systèmes logiciels"],
       cta: "Voir comment ces outils interagissent dans des architectures complètes.",
-      caseStudies: "Découvrir les études de cas"
+      caseStudies: "Découvrir les études de cas",
+      languagesTitle: "Langues",
+      languages: [
+        { name: "Français", level: "Langue maternelle" },
+        { name: "Anglais", level: "C1" },
+        { name: "Arabe", level: "B2" },
+        { name: "Espagnol", level: "B1–B2" }
+      ],
+      outsideCode: "En dehors du code",
+      interests: [
+        {
+          title: "Judo — ceinture noire, +10 ans de pratique",
+          text: "Une pratique qui m’a appris la régularité, la discipline, la persévérance et la capacité à progresser sur le long terme, notamment en travaillant les détails techniques jusqu’à leur maîtrise."
+        },
+        {
+          title: "Street workout",
+          text: "Une pratique basée sur la progression personnelle, la régularité et l’atteinte d’objectifs mesurables, avec un travail progressif sur la maîtrise des mouvements."
+        }
+      ],
+      otherInterests: "Autres centres d’intérêt",
+      interestTags: ["Cinéma", "Jeux vidéo"]
     },
     footer: {
       kicker: "Construisons des systèmes utiles.",
@@ -158,9 +178,9 @@ export const siteTranslations = {
       language: "Language", french: "Français", english: "English", projects: "Projects", experience: "Experience", about: "About", contact: "Contact", github: "GitHub", linkedin: "LinkedIn", unavailable: "Add link", sourceCode: "Source code", technologies: "Technologies", download: "Download", resumeSoon: "Resume coming soon", availabilityLabel: "Professional availability", availability: "Available now — Seeking a 6-month final-year internship in Data Engineering, AI Engineering or Data/AI Consulting"
     },
     home: {
-      status: "Open to graduate opportunities", titleA: "Building data platforms", titleB: "& AI systems.", role: "Data & AI Engineer\nEngineering student at ENSIIE", intro: "I design the systems around data and models—from ingestion, storage and orchestration to RAG pipelines, APIs and user-facing products.", contactCta: "Contact me", resumeCta: "Download my resume", explore: "Explore my work", system: ["Sources", "Pipelines", "Models", "APIs", "Products"], selectedLabel: "Selected work", selectedTitle: "Systems, end to end.", viewAll: "View all projects", focusLabel: "Engineering focus", focusTitle: "Two connected disciplines.", dataTitle: "Data Engineering", dataText: "Reliable paths from source systems to data that can be modelled, tested, queried and served.", dataItems: ["Incremental & batch pipelines", "Streaming foundations", "Data modelling & quality", "Orchestration & cloud storage"], aiTitle: "AI Engineering", aiText: "Applications around language models: document processing, retrieval, controlled tool use and API integration.", aiItems: ["RAG & vector search", "LLM workflows & agents", "Structured outputs", "AI-backed APIs"], thread: "Shared engineering thread", threadSteps: ["Ingest", "Structure", "Reason", "Serve", "Evaluate"], experienceLabel: "Experience", experienceTitle: "Applied AI in professional settings.", fullExperience: "Full experience", moreLabel: "More work", moreTitle: "Applied ML & software foundations.", allTen: "See all ten projects", education: "Education", educationTitle: "Computer science, grounded in mathematics.", degree: "Engineering Degree in Computer Science", specialization: "Specialisation: Applied Mathematics", educationText: "Probability, statistics, machine learning, optimisation, databases, Big Data, algorithms and software systems.", background: "About my background"
+      status: "Open to graduate opportunities", titleA: "Building data platforms", titleB: "& AI systems.", role: "Data & AI Engineer\nEngineering student at ENSIIE", intro: "I design the systems around data and models—from ingestion, storage and orchestration to RAG pipelines, APIs and user-facing products.", contactCta: "Contact me", resumeCta: "Download my resume", explore: "Explore my work", system: ["Sources", "Pipelines", "Models", "APIs", "Products"], selectedLabel: "Selected work", selectedTitle: "Systems, end to end.", viewAll: "View all projects", focusLabel: "Engineering focus", focusTitle: "Two connected disciplines.", dataTitle: "Data Engineering", dataText: "Reliable paths from source systems to data that can be modelled, tested, queried and served.", dataItems: ["Incremental & batch pipelines", "Streaming foundations", "Data modelling & quality", "Orchestration & cloud storage"], aiTitle: "AI Engineering", aiText: "Applications around language models: document processing, retrieval, controlled tool use and API integration.", aiItems: ["RAG & vector search", "LLM workflows & agents", "Structured outputs", "AI-backed APIs"], thread: "Shared engineering thread", threadSteps: ["Ingest", "Structure", "Reason", "Serve", "Evaluate"], experienceLabel: "Experience", experienceTitle: "Applied AI in professional settings.", fullExperience: "Full experience", moreLabel: "More work", moreTitle: "Applied ML & software foundations.", allTen: "See all projects", education: "Education", educationTitle: "Computer science, grounded in mathematics.", degree: "Engineering Degree in Computer Science", specialization: "Specialisation: Applied Mathematics", educationText: "Probability, statistics, machine learning, optimisation, databases, Big Data, algorithms and software systems.", background: "About my background"
     },
-    projectsPage: { eyebrow: "Work / 10 systems", titleA: "Engineering through", titleB: "complete systems.", intro: "Projects are ordered by engineering depth, not chronology. Each case study separates what was built, how it works, what I owned and where the limits are.", filters: { all: "All", data: "Data Engineering", ai: "AI Engineering", ml: "Machine Learning", software: "Software Engineering" }, count: "projects" },
+    projectsPage: { eyebrow: "Work", titleA: "Engineering through", titleB: "complete systems.", intro: "Projects are ordered by engineering depth, not chronology. Each case study separates what was built, how it works, what I owned and where the limits are.", filters: { all: "All", data: "Data Engineering", ai: "AI Engineering", ml: "Machine Learning", software: "Software Engineering" }, count: "projects" },
     caseStudy: { allProjects: "All projects", context: "Context", stack: "Core stack", onPage: "On this page", overviewNav: "Overview", architectureNav: "Architecture", decisionsNav: "Decisions", challengesNav: "Challenges", outcomeNav: "Outcome", limitationsNav: "Limitations", overview: "Overview", contextObjective: "Context & objective", problem: "The technical problem", myRole: "My role", architecture: "Architecture", systemMoves: "How the system moves.", diagramNote: "A deliberately simplified view of the implemented path. It shows responsibilities, not deployment scale.", decisions: "Engineering decisions", choices: "Requirements, choices, trade-offs.", requirement: "Requirement", decision: "Decision", tradeoff: "Trade-off", challenges: "Challenges", judgement: "What required judgement.", response: "Response", outcome: "Outcome", established: "What the project established.", limitations: "Limitations", stops: "Where the work stops.", provenance: "Content provenance", provenanceText: "Case study distilled from {source}. Unsupported dates, metrics, links and implementation details are intentionally omitted.", next: "Next case study" },
     experiencePage: { eyebrow: "Experience / AI systems", titleA: "Prototypes built around", titleB: "real constraints.", intro: "Two internships exploring how language models can support document-heavy work and safely translate intent into system actions.", itemLabel: "Professional experience", publicView: "Public, system-level view", confidentiality: "Details are intentionally kept at a system level. No internal data, documents, endpoints or company architecture are disclosed." },
     aboutPage: {
@@ -171,7 +191,27 @@ export const siteTranslations = {
         { title: "Data & Systems", text: "Relational databases, data networks, operating systems, Big Data architectures and distributed AI." },
         { title: "Software Engineering", text: "Imperative, functional, logic and object-oriented programming, advanced programming, web development and team projects." }
       ],
-      connect: "How the pieces connect", storyTitle: "Models answer questions.\nSystems make the answers usable.", story: ["Applied mathematics gave me tools to reason about uncertainty, optimisation and model behaviour. Software engineering gave me the means to turn that reasoning into maintainable components.", "My recent projects connect both sides: a ledger pipeline with traceable analytical layers, a document-grounded RAG application, cloud data movement, and agent workflows with explicit limitations.", "I’m looking to continue on Data Engineering, AI Engineering, ML Engineering or Cloud Data problems where architecture and implementation have to work together."], toolkit: "Working toolkit", toolkitTitle: "Used across the work.", toolkitNote: "Grouped by context—not ranked with arbitrary proficiency scores.", skillLabels: ["Data engineering", "Cloud & big data", "AI engineering", "Data & storage", "Machine learning", "Software systems"], cta: "See how these tools interact inside complete project architectures.", caseStudies: "Explore case studies"
+      connect: "How the pieces connect", storyTitle: "Models answer questions.\nSystems make the answers usable.", story: ["Applied mathematics gave me tools to reason about uncertainty, optimisation and model behaviour. Software engineering gave me the means to turn that reasoning into maintainable components.", "My recent projects connect both sides: a ledger pipeline with traceable analytical layers, a document-grounded RAG application, cloud data movement, and agent workflows with explicit limitations.", "I’m looking to continue on Data Engineering, AI Engineering, ML Engineering or Cloud Data problems where architecture and implementation have to work together."], toolkit: "Working toolkit", toolkitTitle: "Used across the work.", toolkitNote: "Grouped by context—not ranked with arbitrary proficiency scores.", skillLabels: ["Data engineering", "Cloud & big data", "AI engineering", "Data & storage", "Machine learning", "Software systems"], cta: "See how these tools interact inside complete project architectures.", caseStudies: "Explore case studies",
+      languagesTitle: "Languages",
+      languages: [
+        { name: "French", level: "Native language" },
+        { name: "English", level: "C1" },
+        { name: "Arabic", level: "B2" },
+        { name: "Spanish", level: "B1–B2" }
+      ],
+      outsideCode: "Beyond code",
+      interests: [
+        {
+          title: "Judo — black belt, 10+ years of practice",
+          text: "A practice that taught me consistency, discipline, perseverance and how to progress over the long term, especially by working on technical details until they are mastered."
+        },
+        {
+          title: "Street workout",
+          text: "A practice built around personal progress, consistency and measurable goals, with gradual work towards mastering each movement."
+        }
+      ],
+      otherInterests: "Other interests",
+      interestTags: ["Cinema", "Video games"]
     },
     footer: { kicker: "Let’s build useful systems.", copy: "Open to graduate opportunities across Data Engineering, AI Engineering and ML Engineering.", contactLabel: "Contact", contactTitle: "Let’s talk.", email: "Email", phone: "Phone", resumes: "Resumes", resumeIntro: "The file slots are ready. Download buttons activate once the PDFs are added.", resumeLabels: { general: "General resume", "data-engineering": "Data Engineering resume", "data-ai": "Data Science / AI resume" } },
     notFound: { eyebrow: "404 / Not found", title: "This route is outside the system.", text: "The page may have moved, or the project does not exist.", action: "Browse projects" }

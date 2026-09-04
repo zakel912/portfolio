@@ -21,10 +21,9 @@ export default function HomePage() {
   return (
     <main id="main">
       <section className="hero container">
-        <div className="hero-status"><span className="status-dot" /> {t.status}</div>
         <div className="hero-grid">
           <div>
-            <p className="hero-name">Zakaria El Mrani</p>
+            <div className="hero-status"><span className="status-dot" /> {t.status}</div>
             <h1>{t.titleA} <span>{t.titleB}</span></h1>
           </div>
           <div className="hero-side">
