@@ -7,11 +7,6 @@ export const profile = {
   profileImage: "/profile.jpg",
   resumes: [
     {
-      id: "general",
-      file: "/cv/zakaria-el-mrani-cv-general.pdf",
-      available: false
-    },
-    {
       id: "data-engineering",
       file: "/cv/zakaria-el-mrani-cv-data-engineering.pdf",
       available: true

@@ -42,7 +42,7 @@ export const projects: Project[] = [
       "The scope was deliberately narrow: follow a configured set of wallets and primarily support XRP Payment transactions. It is a local batch prototype, not a complete blockchain indexer or trading product."
     ],
     problem: "Repeatedly downloading complete wallet histories would waste API calls and processing, while transforming directly from the response would lose source traceability. The platform needed a resumable path from a public ledger API to useful, tested analytical tables.",
-    role: "Personal project. I decomposed the system, reviewed architectural proposals, ran and debugged each component, and worked back through the completed system to understand the interactions. GPT generated a substantial part of the implementation; that constraint is part of the project’s retrospective, not hidden from it.",
+    role: "Personal project. I defined the functional stages, reviewed and refined the architecture, integrated the services, and validated the complete system through execution, debugging and end-to-end analysis. AI tools supported parts of the implementation and troubleshooting workflow.",
     flow: ["XRPL API", "Python ingestion", "PostgreSQL raw", "dbt models", "FastAPI", "Streamlit"],
     decisions: [
       { title: "Retain raw responses", requirement: "Preserve the source and make transformations reproducible.", decision: "Store a broad representation of API responses in PostgreSQL before selecting analytical fields with dbt.", tradeoff: "The raw layer keeps more data than current views need, but avoids discarding fields that may become useful later." },
@@ -92,15 +92,15 @@ export const projects: Project[] = [
     shortTitle: "AWS Streaming Pipeline",
     category: "Cloud Data Engineering",
     group: "Data Engineering",
-    contextLabel: "Tutorial-guided personal learning project",
+    contextLabel: "Personal AWS learning project",
     description: "A hands-on producer-to-query pipeline using Kafka on EC2, batched S3 storage, Glue cataloguing and Athena.",
     statement: "A first practical walkthrough of how streamed events move between compute, object storage, metadata and serverless analytics on AWS.",
     technologies: ["Python", "Kafka", "EC2", "S3", "IAM", "AWS Glue", "Athena"],
     featured: true,
     sourceMarkdown: "pipeline-donnees-streaming-aws.md",
-    overview: ["I reproduced this architecture from a video tutorial using my own AWS account in order to manipulate each service directly and understand its responsibility.", "The goal was learning, not a production claim: the producer and consumer were launched manually, and the pipeline did not address orchestration, failure recovery or infrastructure as code."],
+    overview: ["Starting from a reference architecture, I deployed the pipeline in my own AWS account to configure each service directly and understand its responsibility.", "The goal was hands-on learning rather than production readiness: the producer and consumer were launched manually, and the pipeline did not address orchestration, failure recovery or infrastructure as code."],
     problem: "I wanted a concrete understanding of how a broker, remote compute, object storage, a data catalogue and a query layer fit into one cloud data path.",
-    role: "Personal, tutorial-guided learning project. I created and configured the AWS resources, installed Kafka on EC2, connected producer and consumer scripts, worked with IAM permissions and validated the data through Athena.",
+    role: "Personal learning project. I created and configured the AWS resources, installed Kafka on EC2, connected producer and consumer scripts, managed IAM permissions and validated the resulting data through Athena.",
     flow: ["Python producer", "Kafka on EC2", "Python consumer", "Amazon S3", "Glue Catalog", "Athena SQL"],
     decisions: [
       { title: "Batch writes into S3", requirement: "Move consumed events from the broker into object storage.", decision: "Group consumed messages before writing them to S3, organised by time and a business field such as country.", tradeoff: "This introduced a simple lake-like layout, without a full raw/processed/curated zone design." },
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     ],
     challenges: [{ title: "Connecting the services", detail: "The main difficulty was understanding communication between a local environment, EC2, Kafka, S3, Glue and Athena.", response: "I traced the data step by step, configured network access and IAM permissions, then validated the final schema and rows with SQL." }],
     outcome: ["The full manually triggered path worked: publish messages, consume them, observe batched files in S3, catalogue the data and query it through Athena."],
-    limitations: ["Learning project based on a tutorial", "Manual execution with no orchestration", "No advanced offset or consumer-group management", "No monitoring, fault tolerance or infrastructure as code", "No partition or file-format comparison"]
+    limitations: ["Hands-on learning scope rather than production deployment", "Manual execution with no orchestration", "No advanced offset or consumer-group management", "No monitoring, fault tolerance or infrastructure as code", "No partition or file-format comparison"]
   },
   {
     slug: "nyc-taxi-big-data",

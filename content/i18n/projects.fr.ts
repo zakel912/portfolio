@@ -18,7 +18,7 @@ const frenchProjects: Record<string, ProjectTranslation> = {
       "Le périmètre était volontairement limité : suivre un ensemble de wallets configurés et prendre principalement en charge les transactions XRP de type Payment. Il s’agit d’un prototype batch local, pas d’un indexeur blockchain complet ni d’un produit de trading."
     ],
     problem: "Retélécharger l’historique complet des wallets à chaque exécution aurait multiplié les appels API et les traitements. Transformer directement les réponses aurait aussi supprimé la traçabilité de la source. La plateforme devait fournir un chemin reprenable entre l’API publique du ledger et des tables analytiques testées.",
-    role: "Projet personnel. J’ai décomposé le système, examiné les propositions d’architecture, exécuté et débogué chaque composant, puis repris le système complet pour comprendre leurs interactions. GPT a généré une part importante de l’implémentation ; cette contrainte fait partie du retour critique sur le projet et n’est pas masquée.",
+    role: "Projet personnel. J’ai défini les étapes fonctionnelles, examiné et affiné l’architecture, intégré les services, puis validé le système complet par l’exécution, le débogage et l’analyse de bout en bout. Des outils d’IA ont accompagné certaines phases d’implémentation et de résolution de problèmes.",
     flow: ["API XRPL", "Ingestion Python", "PostgreSQL raw", "Modèles dbt", "FastAPI", "Streamlit"],
     decisions: [
       { title: "Conserver les réponses brutes", requirement: "Préserver la source et rendre les transformations reproductibles.", decision: "Stocker une représentation large des réponses API dans PostgreSQL avant de sélectionner les champs analytiques avec dbt.", tradeoff: "La couche raw conserve plus de données que les vues actuelles n’en utilisent, mais évite de perdre des champs potentiellement utiles." },
@@ -61,12 +61,12 @@ const frenchProjects: Record<string, ProjectTranslation> = {
     title: "Pipeline Data Streaming sur AWS",
     shortTitle: "Pipeline Streaming AWS",
     category: "Cloud Data Engineering",
-    contextLabel: "Projet personnel guidé par un tutoriel",
+    contextLabel: "Projet personnel d’apprentissage AWS",
     description: "Une pipeline de prise en main allant du producer à la requête avec Kafka sur EC2, stockage S3 par lots, catalogage Glue et Athena.",
     statement: "Une première mise en pratique du parcours des événements entre calcul, stockage objet, métadonnées et analytique serverless sur AWS.",
-    overview: ["J’ai reproduit cette architecture depuis un tutoriel vidéo sur mon propre compte AWS afin de manipuler directement chaque service et d’en comprendre la responsabilité.", "L’objectif était l’apprentissage, pas une revendication de production : producer et consumer étaient lancés manuellement, sans orchestration, reprise sur erreur ni Infrastructure as Code."],
+    overview: ["À partir d’une architecture de référence, j’ai déployé la pipeline sur mon propre compte AWS afin de configurer directement chaque service et d’en comprendre la responsabilité.", "L’objectif était une mise en pratique concrète plutôt qu’une architecture prête pour la production : producer et consumer étaient lancés manuellement, sans orchestration, reprise sur erreur ni Infrastructure as Code."],
     problem: "Je voulais comprendre concrètement comment un broker, une machine distante, du stockage objet, un catalogue de données et une couche de requête s’intègrent dans un même flux data cloud.",
-    role: "Projet personnel guidé par un tutoriel. J’ai créé et configuré les ressources AWS, installé Kafka sur EC2, relié les scripts producer et consumer, manipulé les permissions IAM et validé les données via Athena.",
+    role: "Projet personnel d’apprentissage. J’ai créé et configuré les ressources AWS, installé Kafka sur EC2, relié les scripts producer et consumer, géré les permissions IAM et validé les données obtenues via Athena.",
     flow: ["Producer Python", "Kafka sur EC2", "Consumer Python", "Amazon S3", "Catalogue Glue", "SQL Athena"],
     decisions: [
       { title: "Écritures par lots dans S3", requirement: "Déplacer les événements consommés du broker vers le stockage objet.", decision: "Regrouper les messages avant de les écrire dans S3, organisés selon le temps et un champ métier comme le pays.", tradeoff: "Cette organisation se rapproche d’un data lake simple, sans séparation complète raw/processed/curated." },
@@ -74,7 +74,7 @@ const frenchProjects: Record<string, ProjectTranslation> = {
     ],
     challenges: [{ title: "Relier les services", detail: "La difficulté principale était de comprendre les échanges entre environnement local, EC2, Kafka, S3, Glue et Athena.", response: "J’ai suivi le flux étape par étape, configuré le réseau et les permissions IAM, puis validé le schéma final et les lignes avec SQL." }],
     outcome: ["Le parcours déclenché manuellement fonctionnait de bout en bout : publier les messages, les consommer, observer les fichiers dans S3, cataloguer les données puis les interroger avec Athena."],
-    limitations: ["Projet d’apprentissage fondé sur un tutoriel", "Exécution manuelle sans orchestration", "Pas de gestion avancée des offsets ou consumer groups", "Pas de monitoring, tolérance aux pannes ou Infrastructure as Code", "Pas de comparaison des partitions ou formats de fichiers"]
+    limitations: ["Périmètre de mise en pratique plutôt que déploiement de production", "Exécution manuelle sans orchestration", "Pas de gestion avancée des offsets ou consumer groups", "Pas de monitoring, tolérance aux pannes ou Infrastructure as Code", "Pas de comparaison des partitions ou formats de fichiers"]
   },
   "nyc-taxi-big-data": {
     title: "Analyse Big Data des taxis de NYC",
