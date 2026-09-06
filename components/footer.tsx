@@ -24,7 +24,6 @@ export function Footer() {
         </div>
         <div className="resume-area">
           <h3>{footer.resumes}</h3>
-          <p>{footer.resumeIntro}</p>
           <div className="resume-list">
             {profile.resumes.map((resume) => resume.available ? (
               <a className="button button-secondary" href={publicAsset(resume.file)} download key={resume.id}>{footer.resumeLabels[resume.id]} <ArrowIcon /></a>
