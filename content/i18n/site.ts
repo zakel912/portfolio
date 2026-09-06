@@ -163,7 +163,6 @@ export const siteTranslations = {
       email: "Email",
       phone: "Téléphone",
       resumes: "Curriculum vitæ",
-      resumeIntro: "Les emplacements sont prêts. Les boutons s’activeront dès que les PDF seront ajoutés.",
       resumeLabels: { "data-engineering": "CV Data Engineering", "data-ai": "CV Data Science / IA" }
     },
     notFound: {
@@ -213,7 +212,7 @@ export const siteTranslations = {
       otherInterests: "Other interests",
       interestTags: ["Cinema", "Video games"]
     },
-    footer: { kicker: "Let’s build useful systems.", copy: "Open to graduate opportunities across Data Engineering, AI Engineering and ML Engineering.", contactLabel: "Contact", contactTitle: "Let’s talk.", email: "Email", phone: "Phone", resumes: "Resumes", resumeIntro: "The file slots are ready. Download buttons activate once the PDFs are added.", resumeLabels: { "data-engineering": "Data Engineering resume", "data-ai": "Data Science / AI resume" } },
+    footer: { kicker: "Let’s build useful systems.", copy: "Open to graduate opportunities across Data Engineering, AI Engineering and ML Engineering.", contactLabel: "Contact", contactTitle: "Let’s talk.", email: "Email", phone: "Phone", resumes: "Resumes", resumeLabels: { "data-engineering": "Data Engineering resume", "data-ai": "Data Science / AI resume" } },
     notFound: { eyebrow: "404 / Not found", title: "This route is outside the system.", text: "The page may have moved, or the project does not exist.", action: "Browse projects" }
   }
 } as const;
